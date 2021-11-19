@@ -1,6 +1,6 @@
 // Firebase.js
 
-import firebase from 'firebase/firebase/app';
+import firebase from 'firebase/app';
 import 'firebase/database';
 
 const firebaseConfig = {
@@ -22,4 +22,8 @@ const firebaseConfig = {
 
   // Initialize Firebase
 
-  const app = initializeApp(firebaseConfig);
+ firebase.initializeApp(firebaseConfig);
+
+  // Export Firebase
+
+  export default firebase;
