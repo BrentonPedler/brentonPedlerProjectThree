@@ -8,6 +8,8 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 
 .srOnly { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
 
+/* START STRIP BASE STYLING */
+
 body,
 ul,
 h1,
@@ -29,12 +31,70 @@ text-decoration: none;
 color: inherit;
 }
 
+/* END STRIP BASE STYLING */
+
+/* GOOGLE FONT */
+
+@import url('https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Metal+Mania&family=Roboto+Mono&display=swap');
+
+/* END OF GOOGLE FONT */
 
 .App {
   text-align: center;
   background-color: black;
   color: white;
+  height: 100vh;
+  font-family: 'Roboto Mono', monospace;
 }
+
+header {
+  height: 30%;
+}
+
+main {
+  height: 60%;
+}
+
+footer {
+  height: 10%;
+}
+
+.wrapper {
+  max-width: 1440px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+h1 {
+  font-family: 'Metal Mania', cursive;
+  font-size: 75px;
+  font-weight: lighter;
+  padding: 50px;
+}
+
+form {
+   display: flex;
+   flex-direction: column;
+   width: 25%;
+   margin: 0 auto;
+}
+
+label {
+  padding: 10px;
+  text-align: center;
+}
+
+.quoteDisplay {
+  border: 1px solid white;
+  margin: 50px auto;
+  padding: 25px;
+  width: 50%;
+}
+
+
+
+
 
 
 
