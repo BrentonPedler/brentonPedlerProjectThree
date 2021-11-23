@@ -9,6 +9,7 @@ const header = () => {
         <header className="wrapper">
 
             <h1>Daily <span>Metal</span> Motivator</h1>
+            <p>Heavy Metal Lyric Generator!</p>
             
         </header>
 

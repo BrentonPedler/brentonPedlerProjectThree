@@ -70,7 +70,7 @@ h1 {
   font-family: 'Metal Mania', cursive;
   font-size: 75px;
   font-weight: lighter;
-  padding: 50px;
+  padding-top: 50px;
 }
 
 span {
@@ -103,6 +103,44 @@ li {
 .buttons {
   display: flex;
   margin: 0 auto;
+}
+
+/* START OF MEDIA QUERIES */
+
+@media (max-width: 1198px) {
+  form {
+    width: 30%;
+  }
+}
+
+@media (max-width: 998px) {
+  form {
+    width: 40%;
+  }
+}
+
+@media (max-width: 748px) {
+  form {
+    width: 50%;
+  }
+}
+
+@media (max-width: 599px) {
+  form {
+    width: 60%;
+  }
+}
+
+@media (max-width: 400px) {
+  h1 {
+    font-size: 50px;
+    padding-bottom: 20px;
+  }
+  form {
+    width: 80%;
+  }
+
+
 }
 
 

@@ -1,13 +1,12 @@
 // Form.js
 
-import { useState, useEffect } from 'react';
-import firebase from './firebase.js';
-import './App.css';
+import { useState } from 'react';
 
-const Form = () => {
-    const [quotes, setQuotes] = useState([]);
+const Form = ({quotes}) => {
+
     const [value, setValue] = useState('');
     const [randomNumber, setRandomNumber] = useState(0);
+    
 
     // FORM FUNCTION
 
@@ -23,31 +22,7 @@ const Form = () => {
         setRandomNumber(randomNumber)
 
     }
-
-
-    // DATA
-
-    useEffect(() => {
-
-        // REFERENCE TO DATA
-
-        const dbRef = firebase.database().ref();
-
-        dbRef.on('value', (response) => {
-
-            // VARIABLE TO STORE NEW STATE
-
-            const newState = [];
-            const data = response.val();
-
-            for (let property in data) {
-                newState.push(data[property]);
-            }
-
-            setQuotes(newState)
-
-        })
-    }, [])
+    
 
     return (
         <div>
