@@ -48,22 +48,14 @@ color: inherit;
   font-family: 'Roboto Mono', monospace;
 }
 
-header {
-  height: 30%;
-}
-
-main {
-  height: 60%;
-}
-
-footer {
-  height: 10%;
-}
-
 .wrapper {
   max-width: 1440px;
   width: 90%;
   margin: 0 auto;
+}
+
+header {
+  height: 30%;
 }
 
 h1 {
@@ -77,20 +69,20 @@ span {
   color: red;
 }
 
+main {
+  height: 60%;
+}
+
 form {
-   display: flex;
-   flex-direction: column;
-   width: 25%;
-   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  margin: 0 auto;
 }
 
 label {
   padding: 10px;
   text-align: center;
-}
-
-li {
-  padding: 10px;
 }
 
 .quoteDisplay {
@@ -100,9 +92,12 @@ li {
   width: 50%;
 }
 
-.buttons {
-  display: flex;
-  margin: 0 auto;
+li {
+  padding: 10px;
+}
+
+footer {
+  height: 10%;
 }
 
 /* START OF MEDIA QUERIES */
