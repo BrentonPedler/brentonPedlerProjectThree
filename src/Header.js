@@ -8,7 +8,7 @@ const header = () => {
 
         <header className="wrapper">
 
-            <h1>Daily Metal Motivator</h1>
+            <h1>Daily <span>Metal</span> Motivator</h1>
             
         </header>
 

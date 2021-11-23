@@ -9,10 +9,10 @@ const Form = () => {
     const [value, setValue] = useState('');
     const [randomNumber, setRandomNumber] = useState(0);
 
-    // FORM FUNCTIONS
+    // FORM FUNCTION
 
-    const handleSelect = (props) => {
-        setValue(props.target.value);
+    const handleSelect = (event) => {
+        setValue(event.target.value);
         generateRandomNumber(randomNumber)
     }
 
@@ -23,6 +23,7 @@ const Form = () => {
         setRandomNumber(randomNumber)
 
     }
+
 
     // DATA
 
@@ -45,36 +46,37 @@ const Form = () => {
 
             setQuotes(newState)
 
-            console.log(newState);
-
         })
     }, [])
 
     return (
         <div>
 
-        <form>
-            <label for="mood">How are you feeling today?</label>
-            <select value="" onChange={handleSelect} name="mood" id="mood">
-                <option value="">Please Select</option>
-                <option value="happy">Happy</option>
-                <option value="angry">Angry</option>
-                <option value="sad">Sad</option>
-            </select>
-        </form>
+            <form>
+                <label htmlFor="mood">How are you feeling today?</label>
+                <select value="" onChange={handleSelect} name="mood" id="mood">
+                    <option value="please select">Please Select</option>
+                    <option value="happy">Happy</option>
+                    <option value="angry">Angry</option>
+                    <option value="sad">Sad</option>
+                </select>
+            </form>
 
 
 
 
-    {
-        quotes.filter((quote) => value === quote.mood && quote.index === randomNumber).map((quote) => (
-            <ul className="quoteDisplay">
-                <li>"{quote.lyric}"</li>
-                <li>-{quote.artist}</li>
-            </ul>
-        ))
-    }
-    </div>
+            {
+                quotes.filter((quote) => value === quote.mood && quote.index === randomNumber).map((quote) => (
+                    
+                        <ul key="i" className="quoteDisplay">
+                            <li>"{quote.lyric}"</li>
+                            <li>-{quote.artist}</li>
+                        </ul>
+                ))
+
+            }
+
+        </div>
 
     )
 }

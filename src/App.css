@@ -73,6 +73,10 @@ h1 {
   padding: 50px;
 }
 
+span {
+  color: red;
+}
+
 form {
    display: flex;
    flex-direction: column;
@@ -85,11 +89,20 @@ label {
   text-align: center;
 }
 
+li {
+  padding: 10px;
+}
+
 .quoteDisplay {
   border: 1px solid white;
   margin: 50px auto;
   padding: 25px;
   width: 50%;
+}
+
+.buttons {
+  display: flex;
+  margin: 0 auto;
 }
 
 
