@@ -41,7 +41,7 @@ function App() {
   return (
 
     <div className="App">
-      <Header className="wrapper" />
+      <Header />
       <main className="wrapper">
         <Form quotes={quotes} />
       </main>
