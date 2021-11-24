@@ -52,11 +52,11 @@ const Form = ({ quotes }) => {
     }
 
 
-
+    // DROPDOWN & QUOTE DISPLAY
 
     return (
         <div>
-
+            
             <form>
                 <label htmlFor="mood">How are you feeling today?</label>
                 <select value="" onChange={handleSelect} name="mood" id="mood">
