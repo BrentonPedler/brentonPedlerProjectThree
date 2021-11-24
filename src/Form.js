@@ -1,12 +1,12 @@
 // Form.js
 
 import { useState } from 'react';
+import firebase from 'firebase/app';
 
-const Form = ({quotes}) => {
+const Form = ({ quotes }) => {
 
     const [value, setValue] = useState('');
     const [randomNumber, setRandomNumber] = useState(0);
-    
 
     // FORM FUNCTION
 
@@ -22,7 +22,37 @@ const Form = ({quotes}) => {
         setRandomNumber(randomNumber)
 
     }
-    
+
+    // LIKE FUNCTION
+
+    const likeOperator = (quote) => {
+        const dbRef = firebase.database().ref(`/${quote.property}`);
+        const oldObject = {...quote}
+        const newLike = oldObject.likes + 1;
+        const newObject = { 
+            ...oldObject, 
+            likes: newLike
+        }
+        delete newObject.property
+        dbRef.update(newObject)
+    }
+
+    // DISLIKE FUNCTION
+
+    const dislikeOperator = (quote) => {
+        const dbRef = firebase.database().ref(`/${quote.property}`);
+        const oldObject = {...quote}
+        const newDislike = oldObject.dislikes + 1;
+        const newObject = {
+            ...oldObject,
+            dislikes: newDislike
+        }
+        delete newObject.property
+        dbRef.update(newObject)
+    }
+
+
+
 
     return (
         <div>
@@ -41,13 +71,25 @@ const Form = ({quotes}) => {
 
 
             {
-                quotes.filter((quote) => value === quote.mood && quote.index === randomNumber).map((quote) => (
-                    
-                        <ul key="i" className="quoteDisplay">
-                            <li>"{quote.lyric}"</li>
-                            <li>-{quote.artist}</li>
-                        </ul>
-                ))
+                quotes.filter((quote) => value === quote.mood && quote.index === randomNumber).map((quote) => {
+                    console.log(quote)
+                    return (
+                        <div key={quote.property}>
+                            <ul className="quoteDisplay">
+                                <li>"{quote.lyric}"</li>
+                                <li>-{quote.artist}</li>
+                            </ul>
+
+                            <ul className="reactions">
+                                <li>{quote.likes}</li>
+                                <li>{quote.dislikes}</li>
+                            </ul>
+
+                            <button onClick={() => likeOperator(quote)}>LOVE</button>
+                            <button onClick={() => dislikeOperator(quote)}>HATE</button>
+                        </div>
+                    )
+                })
 
             }
 

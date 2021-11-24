@@ -29,7 +29,12 @@ function App() {
       const data = response.val();
 
       for (let property in data) {
-        newState.push(data[property]);
+        const obj = {
+          property,
+          ...data[property]
+          }
+
+        newState.push(obj);
       }
 
       setQuotes(newState)
