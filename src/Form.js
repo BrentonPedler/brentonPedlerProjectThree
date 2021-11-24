@@ -72,7 +72,6 @@ const Form = ({ quotes }) => {
 
             {
                 quotes.filter((quote) => value === quote.mood && quote.index === randomNumber).map((quote) => {
-                    console.log(quote)
                     return (
                         <div key={quote.property}>
                             <ul className="quoteDisplay">
