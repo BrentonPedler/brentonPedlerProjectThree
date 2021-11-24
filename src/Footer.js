@@ -1,5 +1,4 @@
 // Footer.js
-
 import './App.css';
 
 const footer = () => {

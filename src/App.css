@@ -8,37 +8,30 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 
 .srOnly { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
 
-/* START STRIP BASE STYLING */
-
-body,
-ul,
-h1,
-h2,
-h3,
-p,
-a,
-i{
-margin: 0;
-padding: 0;
-}
-
-li{
-list-style: none;
-}
-
-a{
-text-decoration: none;
-color: inherit;
-}
-
-/* END STRIP BASE STYLING */
-
 /* GOOGLE FONT */
 
 @import url('https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Metal+Mania&family=Roboto+Mono&display=swap');
 
 /* END OF GOOGLE FONT */
+
+/* START STRIP BASE STYLING */
+
+body, ul, h1, h2, h3, p, a, i {
+margin: 0;
+padding: 0;
+}
+
+li {
+list-style: none;
+}
+
+a {
+text-decoration: none;
+color: inherit;
+}
+
+/* END STRIP BASE STYLING */
 
 .App {
   text-align: center;
@@ -175,8 +168,6 @@ footer {
   .quoteDisplay {
     width: 100%;
   }
-
-
 }
 
 
