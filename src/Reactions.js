@@ -15,7 +15,6 @@ const Reactions = ({quote}) => {
         }
         delete newObject.property
         dbRef.update(newObject)
-        console.log(newObject)
     }
 
     // DISLIKE FUNCTION
@@ -34,8 +33,10 @@ const Reactions = ({quote}) => {
 
     return (
         <>
-            <button onClick={() => likeOperator(quote)}>LOVE</button>
-            <button onClick={() => dislikeOperator(quote)}>HATE</button>   
+            <div className="counter">
+                <button onClick={() => likeOperator(quote)}>Like</button>
+                <button onClick={() => dislikeOperator(quote)}>Dislike</button>   
+            </div>
         </>
     )
 }

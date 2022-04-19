@@ -79,6 +79,10 @@ label {
   text-align: center;
 }
 
+select {
+  text-align: center;
+}
+
 .quoteDisplay {
   border: 2px solid white;
   margin: 30px auto;
@@ -86,30 +90,37 @@ label {
   width: 50%;
 }
 
+.quoteDisplay a {
+  color: red;
+  font-size: 16px;
+  font-style: italic;
+  text-decoration: underline;
+}
+
 li {
-  padding: 10px;
+  padding: 10px 0px;
 }
 
 .reactions {
   display: flex;
   justify-content: center;
+  gap: 125px;
   margin: 0 auto;
   width: 20%;
 }
 
-.reactions li {
-  padding: 5px 28px;
-  border: 2px solid white;
-  margin: 0px 32px;
+.counter {
+  display: flex;
+  justify-content: center;
 }
 
 button {
-  margin: 10px 30px;
-  padding: 5px 20px;
+  margin: 0px 30px;
   border: 2px solid black;
   font-family: 'Metal Mania', cursive;
   background-color: white;
   cursor: pointer;
+  width: 100px;
 }
 
 button:hover {

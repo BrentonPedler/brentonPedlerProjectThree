@@ -21,7 +21,6 @@ const Form = ({ quotes }) => {
     // DROPDOWN & QUOTE DISPLAY
     return (
         <div>
-            
             <form>
                 <label htmlFor="mood">How are you feeling today?</label>
                 <select value="" onChange={handleSelect} name="mood" id="mood">
@@ -32,21 +31,22 @@ const Form = ({ quotes }) => {
                 </select>
             </form>
             {
-                quotes.filter((quote) => value === quote.mood && quote.index === randomNumber)
-                .map((quote) => {
-                    return (
-                        <div key={quote.property}>
-                            <ul className="quoteDisplay">
-                                <li>"{quote.lyric}"</li>
-                                <li>-{quote.artist}</li>
-                            </ul>
-                            <ul className="reactions">
-                                <li>{quote.likes}</li>
-                                <li>{quote.dislikes}</li>
-                            </ul>
-                            <Reactions quote={quote} />
-                        </div>
-                    )
+                quotes.map((quote) => {
+                    if (value === quote.mood && quote.index === randomNumber)
+                        return (
+                            <div key={quote.property}>
+                                <ul className="quoteDisplay">
+                                    <li>"{quote.lyric}"</li>
+                                    <li>-{quote.artist}</li>
+                                    <li><a href={quote.link} target="_blank">Listen to Track</a></li>
+                                </ul>
+                                <ul className="reactions">
+                                    <li>{quote.likes}</li>
+                                    <li>{quote.dislikes}</li>
+                                </ul>
+                                <Reactions quote={quote} />
+                            </div>
+                        )
                 })
             }
         </div>
