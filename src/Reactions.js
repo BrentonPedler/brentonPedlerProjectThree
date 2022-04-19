@@ -7,6 +7,7 @@ const Reactions = ({quote}) => {
       const likeOperator = (quote) => {
         const dbRef = firebase.database().ref(`/${quote.property}`);
         const oldObject = {...quote}
+        console.log(oldObject);
         const newLike = oldObject.likes + 1;
         const newObject = { 
             ...oldObject, 
@@ -14,6 +15,7 @@ const Reactions = ({quote}) => {
         }
         delete newObject.property
         dbRef.update(newObject)
+        console.log(newObject)
     }
 
     // DISLIKE FUNCTION

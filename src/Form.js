@@ -9,13 +9,13 @@ const Form = ({ quotes }) => {
     // FORM FUNCTION
     const handleSelect = (event) => {
         setValue(event.target.value);
-        generateRandomNumber(randomNumber)
+        generateRandomNumber(randomNumber);
     }
 
     // RANDOM NUMBER FUNCTION
-        const generateRandomNumber = () => {
+    const generateRandomNumber = () => {
         const randomNumber = Math.floor(Math.random() * 7);
-        setRandomNumber(randomNumber)
+        setRandomNumber(randomNumber);
     }
 
     // DROPDOWN & QUOTE DISPLAY
@@ -32,7 +32,8 @@ const Form = ({ quotes }) => {
                 </select>
             </form>
             {
-                quotes.filter((quote) => value === quote.mood && quote.index === randomNumber).map((quote) => {
+                quotes.filter((quote) => value === quote.mood && quote.index === randomNumber)
+                .map((quote) => {
                     return (
                         <div key={quote.property}>
                             <ul className="quoteDisplay">
