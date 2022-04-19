@@ -18,6 +18,7 @@ const Form = ({ quotes }) => {
         setRandomNumber(randomNumber);
     }
 
+
     // DROPDOWN & QUOTE DISPLAY
     return (
         <div>
