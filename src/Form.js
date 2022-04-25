@@ -32,8 +32,8 @@ const Form = ({ quotes }) => {
                 </select>
             </form>
             {
-                quotes.map((quote) => {
-                    if (value === quote.mood && quote.index === randomNumber)
+                quotes.filter((quote) => value === quote.mood && quote.index === randomNumber)
+                    .map((quote) => {
                         return (
                             <div key={quote.property}>
                                 <ul className="quoteDisplay">
