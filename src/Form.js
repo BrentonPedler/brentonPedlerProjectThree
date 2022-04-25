@@ -39,7 +39,7 @@ const Form = ({ quotes }) => {
                                 <ul className="quoteDisplay">
                                     <li>"{quote.lyric}"</li>
                                     <li>-{quote.artist}</li>
-                                    <li><a href={quote.link} target="_blank">Listen to Track</a></li>
+                                    <li><a href={quote.link} target="_blank" rel="noopener noreferrer">Listen to Track</a></li>
                                 </ul>
                                 <ul className="reactions">
                                     <li>{quote.likes}</li>
